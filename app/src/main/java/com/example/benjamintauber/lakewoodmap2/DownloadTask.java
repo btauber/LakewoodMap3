@@ -18,8 +18,10 @@ import java.io.InputStreamReader;
  * Created by benjamintauber on 8/26/15.
  */
 public class DownloadTask extends AsyncTask<String, Integer, String> {
-
-
+    private WebServiceListener wsl;
+    public DownloadTask(WebServiceListener wsl){
+        this.wsl = wsl;
+    }
     @Override
     protected String doInBackground(String... params) {
         String result = "";
